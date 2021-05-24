@@ -1,0 +1,70 @@
+# FDC_WC
+
+Pig Latin (25 Points) - ( PHP )
+
+Create a program that converts an array of strings to "pig latin". 
+Pig Latin takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an "ay".
+
+For words that begin with consonant sounds, all letters before the initial vowel are placed at the end of the word sequence. Then, "ay" is added, as in the following examples:
+
+"pig" = "igpay"
+"latin" = "atinlay"
+"banana" = "ananabay"
+
+For words that begin with vowel sounds, one just adds "way" or "yay" to the end (or just "ay"). Examples are:
+
+"are" = "areway" or "areay"
+"egg" = "eggway" or "eggay"
+
+
+-------------------------- code below
+<?php
+//array of strings - editable
+$myArr = array("tortang talong", "apple");
+
+function makePigLatin($myArr) {
+  foreach ($myArr as $value) {
+   if (isVowel(strtolower(substr($value, 0, 1)) == 1)) {
+      echo substr($value, 1 , strlen($value)) ."way \n";
+   } else {
+      echo substr($value, 1 , strlen($value)) . $value[0] ."ay \n";
+   }
+}
+}
+
+function isVowel($letter) {
+   return ($letter == 'a' || $letter == 'e' || $letter == 'i' || $letter == 'o' || $letter == 'u');
+}
+
+makePigLatin($myArr);
+?>
+-------------------------------
+
+Fibonacci Series (25 Points) - ( Javascript )
+
+Create a program that will return the  first n numbers of the Fibonacci sequence.
+
+The Fibonacci sequence is a set of numbers that starts with a one or a zero, followed by a one, and proceeds based on the rule that each number (called a Fibonacci number) is equal to the sum of the preceding two numbers. 
+
+-------------------------- code below
+
+<script>
+//Fibonacci series 
+var n = 4; //editable
+var firstTerm = 0;
+var secondTerm = 1;
+var nthTerm;
+var i;
+
+// print 1st & 2nd number and start index with 2 as 2 numbers already printed.
+document.write(firstTerm + " " + secondTerm);
+for (i = 2; i < 4; i++) {
+  nthTerm = firstTerm + secondTerm;
+  //print the next or nth number
+  document.write(" " + nthTerm + " ");
+  firstTerm = secondTerm;
+  secondTerm = nthTerm;
+}
+</script>
+
+
