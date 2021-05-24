@@ -56,8 +56,9 @@ var secondTerm = 1;
 var nthTerm;
 var i;
 
-// print 1st & 2nd number and start index with 2 as 1st & 2nd number are already printed.
+// print 1st & 2nd number
 document.write(firstTerm + " " + secondTerm);
+// start index with 2 as 1st & 2nd number are already printed
 for (i = 2; i < n; i++) {
   nthTerm = firstTerm + secondTerm;
   //print the next or nth number
