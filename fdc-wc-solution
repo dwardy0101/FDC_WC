@@ -24,12 +24,12 @@ $myArr = array("tortang talong", "apple");
 
 function makePigLatin($myArr) {
   foreach ($myArr as $value) {
-   if (isVowel(strtolower(substr($value, 0, 1)) == 1)) {
-      echo substr($value, 1 , strlen($value)) ."way \n";
-   } else {
+    if (isVowel(strtolower(substr($value, 0, 1))) == 1) {
+      echo substr($value, 0 , strlen($value)) ."way \n";
+    } else {
       echo substr($value, 1 , strlen($value)) . $value[0] ."ay \n";
-   }
-}
+    }
+  }
 }
 
 function isVowel($letter) {
